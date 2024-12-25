@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "gazebo_msgs/srv/GetLightProperties_Request",
+      "fields": [
+        {
+          "name": "light_name",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "gazebo_msgs/srv/GetLightProperties_Request",
+      "hash_string": "RIHS01_8d9955a66253919068fc34f22b4cb97fba2eb40dec0a051adba00a11f9f69107"
+    }
+  ]
+}

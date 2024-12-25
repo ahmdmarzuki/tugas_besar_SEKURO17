@@ -1,0 +1,28 @@
+[0.014s] Invoking command in '/home/ahmrrzz/tubes_sekuro_ws/build/gazebo_dev': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ahmrrzz/tubes_sekuro_ws/install/my_robot:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ahmrrzz/tubes_sekuro_ws/src/gazebo_ros_pkgs/gazebo_dev -DCMAKE_INSTALL_PREFIX=/home/ahmrrzz/tubes_sekuro_ws/install/gazebo_dev
+[0.028s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.168s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.357s] -- Configuring done (0.3s)
+[0.359s] -- Generating done (0.0s)
+[0.361s] -- Build files have been written to: /home/ahmrrzz/tubes_sekuro_ws/build/gazebo_dev
+[0.363s] Invoked command in '/home/ahmrrzz/tubes_sekuro_ws/build/gazebo_dev' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ahmrrzz/tubes_sekuro_ws/install/my_robot:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ahmrrzz/tubes_sekuro_ws/src/gazebo_ros_pkgs/gazebo_dev -DCMAKE_INSTALL_PREFIX=/home/ahmrrzz/tubes_sekuro_ws/install/gazebo_dev
+[0.364s] Invoking command in '/home/ahmrrzz/tubes_sekuro_ws/build/gazebo_dev': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ahmrrzz/tubes_sekuro_ws/install/my_robot:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ahmrrzz/tubes_sekuro_ws/build/gazebo_dev -- -j8 -l8
+[0.396s] Invoked command in '/home/ahmrrzz/tubes_sekuro_ws/build/gazebo_dev' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ahmrrzz/tubes_sekuro_ws/install/my_robot:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ahmrrzz/tubes_sekuro_ws/build/gazebo_dev -- -j8 -l8
+[0.406s] Invoking command in '/home/ahmrrzz/tubes_sekuro_ws/build/gazebo_dev': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ahmrrzz/tubes_sekuro_ws/install/my_robot:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ahmrrzz/tubes_sekuro_ws/build/gazebo_dev
+[0.414s] -- Install configuration: ""
+[0.414s] -- Installing: /home/ahmrrzz/tubes_sekuro_ws/install/gazebo_dev/share/ament_index/resource_index/package_run_dependencies/gazebo_dev
+[0.414s] -- Installing: /home/ahmrrzz/tubes_sekuro_ws/install/gazebo_dev/share/ament_index/resource_index/parent_prefix_path/gazebo_dev
+[0.414s] -- Installing: /home/ahmrrzz/tubes_sekuro_ws/install/gazebo_dev/share/gazebo_dev/environment/ament_prefix_path.sh
+[0.414s] -- Installing: /home/ahmrrzz/tubes_sekuro_ws/install/gazebo_dev/share/gazebo_dev/environment/ament_prefix_path.dsv
+[0.414s] -- Installing: /home/ahmrrzz/tubes_sekuro_ws/install/gazebo_dev/share/gazebo_dev/environment/path.sh
+[0.414s] -- Installing: /home/ahmrrzz/tubes_sekuro_ws/install/gazebo_dev/share/gazebo_dev/environment/path.dsv
+[0.414s] -- Installing: /home/ahmrrzz/tubes_sekuro_ws/install/gazebo_dev/share/gazebo_dev/local_setup.bash
+[0.414s] -- Installing: /home/ahmrrzz/tubes_sekuro_ws/install/gazebo_dev/share/gazebo_dev/local_setup.sh
+[0.415s] -- Installing: /home/ahmrrzz/tubes_sekuro_ws/install/gazebo_dev/share/gazebo_dev/local_setup.zsh
+[0.415s] -- Installing: /home/ahmrrzz/tubes_sekuro_ws/install/gazebo_dev/share/gazebo_dev/local_setup.dsv
+[0.415s] -- Installing: /home/ahmrrzz/tubes_sekuro_ws/install/gazebo_dev/share/gazebo_dev/package.dsv
+[0.415s] -- Installing: /home/ahmrrzz/tubes_sekuro_ws/install/gazebo_dev/share/ament_index/resource_index/packages/gazebo_dev
+[0.415s] -- Installing: /home/ahmrrzz/tubes_sekuro_ws/install/gazebo_dev/share/gazebo_dev/cmake/gazebo_dev-extras.cmake
+[0.415s] -- Installing: /home/ahmrrzz/tubes_sekuro_ws/install/gazebo_dev/share/gazebo_dev/cmake/gazebo_devConfig.cmake
+[0.415s] -- Installing: /home/ahmrrzz/tubes_sekuro_ws/install/gazebo_dev/share/gazebo_dev/cmake/gazebo_devConfig-version.cmake
+[0.415s] -- Installing: /home/ahmrrzz/tubes_sekuro_ws/install/gazebo_dev/share/gazebo_dev/package.xml
+[0.418s] Invoked command in '/home/ahmrrzz/tubes_sekuro_ws/build/gazebo_dev' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ahmrrzz/tubes_sekuro_ws/install/my_robot:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ahmrrzz/tubes_sekuro_ws/build/gazebo_dev

@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "gazebo_msgs/srv/DeleteModel_Request",
+      "fields": [
+        {
+          "name": "model_name",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "gazebo_msgs/srv/DeleteModel_Request",
+      "hash_string": "RIHS01_3a82c4a8f0097aa352378da8459f38933ca02142f8ed42acda9a2220c2372fff"
+    }
+  ]
+}

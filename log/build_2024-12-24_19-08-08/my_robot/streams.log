@@ -1,0 +1,15 @@
+[0.912s] Invoking command in '/home/ahmrrzz/tubes_sekuro_ws/build/my_robot': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ahmrrzz/tubes_sekuro_ws/build/my_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ahmrrzz/tubes_sekuro_ws/build/my_robot/build --no-deps symlink_data
+[1.208s] running develop
+[1.400s] running egg_info
+[1.420s] writing my_robot.egg-info/PKG-INFO
+[1.420s] writing dependency_links to my_robot.egg-info/dependency_links.txt
+[1.420s] writing requirements to my_robot.egg-info/requires.txt
+[1.420s] writing top-level names to my_robot.egg-info/top_level.txt
+[1.457s] reading manifest file 'my_robot.egg-info/SOURCES.txt'
+[1.458s] writing manifest file 'my_robot.egg-info/SOURCES.txt'
+[1.477s] running build_ext
+[1.477s] Creating /home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/python3.12/site-packages/my-robot.egg-link (link to .)
+[1.478s] 
+[1.478s] Installed /home/ahmrrzz/tubes_sekuro_ws/build/my_robot
+[1.478s] running symlink_data
+[1.515s] Invoked command in '/home/ahmrrzz/tubes_sekuro_ws/build/my_robot' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ahmrrzz/tubes_sekuro_ws/build/my_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ahmrrzz/tubes_sekuro_ws/build/my_robot/build --no-deps symlink_data

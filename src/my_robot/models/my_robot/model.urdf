@@ -1,0 +1,173 @@
+<?xml version="1.0" ?>
+<robot name="my_robot">
+
+  <!-- CHASSIS -->
+  <link name="chassis">
+    <inertial>
+      <mass value="1.14395"/>
+      <inertia ixx="0.095329" ixy="0" ixz="0" iyy="0.381317" iyz="0" izz="0.476646"/>
+    </inertial>
+
+    <!-- Visual -->
+    <visual>
+      <geometry>
+        <box size="2.0 1.0 0.5"/>
+      </geometry>
+      <material name="chassis_material">
+        <ambient>0.0 0.0 0.3 1</ambient>
+        <diffuse>0.0 0.0 0.4 1</diffuse>
+        <specular>0.1 0.1 0.3 1</specular>
+      </material>
+    </visual>
+
+    <!-- Collision -->
+    <collision>
+      <geometry>
+        <box size="2.0 1.0 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- LEFT WHEEL -->
+  <link name="left_wheel">
+    <inertial>
+      <mass value="1"/>
+      <inertia ixx="0.043333" ixy="0" ixz="0" iyy="0.043333" iyz="0" izz="0.08"/>
+    </inertial>
+
+    <!-- Visual -->
+    <visual>
+      <geometry>
+        <cylinder radius="0.4" length="0.2"/>
+      </geometry>
+      <material name="wheel_material">
+        <ambient>0.05 0.05 0.05 1</ambient>
+        <diffuse>0.05 0.05 0.05 1</diffuse>
+        <specular>0.1 0.1 0.1 1</specular>
+      </material>
+    </visual>
+
+    <!-- Collision -->
+    <collision>
+      <geometry>
+        <cylinder radius="0.4" length="0.2"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- RIGHT WHEEL -->
+  <link name="right_wheel">
+    <inertial>
+      <mass value="1"/>
+      <inertia ixx="0.043333" ixy="0" ixz="0" iyy="0.043333" iyz="0" izz="0.08"/>
+    </inertial>
+
+    <!-- Visual -->
+    <visual>
+      <geometry>
+        <cylinder radius="0.4" length="0.2"/>
+      </geometry>
+      <material name="wheel_material">
+        <ambient>0.05 0.05 0.05 1</ambient>
+        <diffuse>0.05 0.05 0.05 1</diffuse>
+        <specular>0.1 0.1 0.1 1</specular>
+      </material>
+    </visual>
+
+    <!-- Collision -->
+    <collision>
+      <geometry>
+        <cylinder radius="0.4" length="0.2"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- CASTER -->
+  <link name="caster">
+    <inertial>
+      <mass value="1"/>
+      <inertia ixx="0.016" ixy="0" ixz="0" iyy="0.016" iyz="0" izz="0.016"/>
+    </inertial>
+
+    <!-- Visual -->
+    <visual>
+      <geometry>
+        <sphere radius="0.2"/>
+      </geometry>
+      <material name="caster_material">
+        <ambient>0.05 0.05 0.05 1</ambient>
+        <diffuse>0.05 0.05 0.05 1</diffuse>
+        <specular>0.1 0.1 0.1 1</specular>
+      </material>
+    </visual>
+
+    <!-- Collision -->
+    <collision>
+      <geometry>
+        <sphere radius="0.2"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- JOINTS -->
+  <!-- Left Wheel Joint -->
+  <joint name="left_wheel_joint" type="revolute">
+    <parent link="chassis"/>
+    <child link="left_wheel"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308"/>
+  </joint>
+
+  <!-- Right Wheel Joint -->
+  <joint name="right_wheel_joint" type="revolute">
+    <parent link="chassis"/>
+    <child link="right_wheel"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308"/>
+  </joint>
+
+  <!-- Caster Joint -->
+  <joint name="caster_wheel" type="ball">
+    <parent link="chassis"/>
+    <child link="caster"/>
+  </joint>
+
+  <!-- Plugins -->
+  <gazebo>
+    <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
+      <left_joint>left_wheel_joint</left_joint>
+      <right_joint>right_wheel_joint</right_joint>
+      <wheel_separation>1.2</wheel_separation>
+      <wheel_radius>0.4</wheel_radius>
+      <odom_publish_frequency>1</odom_publish_frequency>
+      <topic>/cmd_vel</topic>
+    </plugin>
+  </gazebo>
+
+  <!-- LIDAR -->
+  <link name="laser_frame">
+    <visual>
+      <geometry>
+        <cylinder radius="0.2" length="0.1"/>
+      </geometry>
+      <material name="laser_material">
+        <ambient>1.0 0.0 0.0 1.0</ambient>
+        <diffuse>1.0 0.0 0.0 1.0</diffuse>
+        <specular>0.5 0.0 0.0 1.0</specular>
+      </material>
+    </visual>
+
+    <collision>
+      <geometry>
+        <cylinder radius="0.05" length="0.01"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="laser_joint" type="fixed">
+    <parent link="chassis"/>
+    <child link="laser_frame"/>
+    <pose>0 0 0.4 0 0 0</pose>
+  </joint>
+
+</robot>

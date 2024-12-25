@@ -1,0 +1,17 @@
+running develop
+running egg_info
+writing my_robot.egg-info/PKG-INFO
+writing dependency_links to my_robot.egg-info/dependency_links.txt
+writing entry points to my_robot.egg-info/entry_points.txt
+writing requirements to my_robot.egg-info/requires.txt
+writing top-level names to my_robot.egg-info/top_level.txt
+reading manifest file 'my_robot.egg-info/SOURCES.txt'
+writing manifest file 'my_robot.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/python3.12/site-packages/my-robot.egg-link (link to .)
+Installing my_robot_node script to /home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/my_robot
+
+Installed /home/ahmrrzz/tubes_sekuro_ws/build/my_robot
+running symlink_data
+symbolically linking /home/ahmrrzz/tubes_sekuro_ws/build/my_robot/resource/my_robot -> /home/ahmrrzz/tubes_sekuro_ws/install/my_robot/share/ament_index/resource_index/packages
+symbolically linking /home/ahmrrzz/tubes_sekuro_ws/build/my_robot/package.xml -> /home/ahmrrzz/tubes_sekuro_ws/install/my_robot/share/my_robot

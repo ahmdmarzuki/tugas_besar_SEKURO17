@@ -1,0 +1,17 @@
+[0.957s] Invoking command in '/home/ahmrrzz/tubes_sekuro_ws/build/my_robot': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ahmrrzz/tubes_sekuro_ws/build/my_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ahmrrzz/tubes_sekuro_ws/build/my_robot/build --no-deps symlink_data
+[1.333s] running develop
+[1.562s] running egg_info
+[1.584s] writing my_robot.egg-info/PKG-INFO
+[1.584s] writing dependency_links to my_robot.egg-info/dependency_links.txt
+[1.585s] writing entry points to my_robot.egg-info/entry_points.txt
+[1.585s] writing requirements to my_robot.egg-info/requires.txt
+[1.585s] writing top-level names to my_robot.egg-info/top_level.txt
+[1.632s] reading manifest file 'my_robot.egg-info/SOURCES.txt'
+[1.632s] writing manifest file 'my_robot.egg-info/SOURCES.txt'
+[1.656s] running build_ext
+[1.657s] Creating /home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/python3.12/site-packages/my-robot.egg-link (link to .)
+[1.657s] Installing my_robot_node script to /home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/my_robot
+[1.657s] 
+[1.658s] Installed /home/ahmrrzz/tubes_sekuro_ws/build/my_robot
+[1.658s] running symlink_data
+[1.696s] Invoked command in '/home/ahmrrzz/tubes_sekuro_ws/build/my_robot' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ahmrrzz/tubes_sekuro_ws/build/my_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ahmrrzz/tubes_sekuro_ws/build/my_robot/build --no-deps symlink_data

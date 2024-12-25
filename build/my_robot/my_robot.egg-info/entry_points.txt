@@ -1,0 +1,3 @@
+[console_scripts]
+camera_subscriber = my_robot.camera_subscriber:main
+image_processor = my_robot.image_processor:main
