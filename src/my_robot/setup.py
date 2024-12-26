@@ -1,4 +1,6 @@
 from setuptools import find_packages, setup
+import os
+from glob import glob
 
 package_name = 'my_robot'
 
@@ -11,6 +13,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        (os.path.join('share', package_name, 'launch'), glob('launch/*.py')),
     ],
     install_requires=['setuptools', 'launch', 'launch_ros'],
     zip_safe=True,
@@ -22,7 +25,9 @@ setup(
     entry_points={
         'console_scripts': [
             'camera_subscriber = my_robot.camera_subscriber:main',
-            'image_processor = my_robot.image_processor:main'
+            'image_processor = my_robot.image_processor:main',
+            'launch = my_robot.launch:main',
+            'lidar_node = my_robot.lidar_node:main',
         ],
     },
 )
