@@ -24,8 +24,6 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'camera_subscriber = my_robot.camera_subscriber:main',
-            'image_processor = my_robot.image_processor:main',
             'launch = my_robot.launch:main',
             'lidar_node = my_robot.lidar_node:main',
         ],

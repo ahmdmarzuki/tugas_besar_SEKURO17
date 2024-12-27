@@ -1,16 +1,10 @@
 /home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/python3.12/site-packages/my_robot/__init__.py
 /home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/python3.12/site-packages/my_robot/lidar_node.py
-/home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/python3.12/site-packages/my_robot/camera_show.py
-/home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/python3.12/site-packages/my_robot/image_processor.py
-/home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/python3.12/site-packages/my_robot/camera_subscriber.py
 /home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/python3.12/site-packages/my_robot/__pycache__/__init__.cpython-312.pyc
 /home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/python3.12/site-packages/my_robot/__pycache__/lidar_node.cpython-312.pyc
-/home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/python3.12/site-packages/my_robot/__pycache__/camera_show.cpython-312.pyc
-/home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/python3.12/site-packages/my_robot/__pycache__/image_processor.cpython-312.pyc
-/home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/python3.12/site-packages/my_robot/__pycache__/camera_subscriber.cpython-312.pyc
 /home/ahmrrzz/tubes_sekuro_ws/install/my_robot/share/ament_index/resource_index/packages/my_robot
 /home/ahmrrzz/tubes_sekuro_ws/install/my_robot/share/my_robot/package.xml
-/home/ahmrrzz/tubes_sekuro_ws/install/my_robot/share/my_robot/launch/launch.py
+/home/ahmrrzz/tubes_sekuro_ws/install/my_robot/share/my_robot/launch/imu_launch.py
 /home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/python3.12/site-packages/my_robot-0.0.0-py3.12.egg-info/dependency_links.txt
 /home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/python3.12/site-packages/my_robot-0.0.0-py3.12.egg-info/PKG-INFO
 /home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/python3.12/site-packages/my_robot-0.0.0-py3.12.egg-info/entry_points.txt
@@ -18,7 +12,5 @@
 /home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/python3.12/site-packages/my_robot-0.0.0-py3.12.egg-info/zip-safe
 /home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/python3.12/site-packages/my_robot-0.0.0-py3.12.egg-info/SOURCES.txt
 /home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/python3.12/site-packages/my_robot-0.0.0-py3.12.egg-info/requires.txt
-/home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/my_robot/camera_subscriber
-/home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/my_robot/image_processor
 /home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/my_robot/launch
 /home/ahmrrzz/tubes_sekuro_ws/install/my_robot/lib/my_robot/lidar_node

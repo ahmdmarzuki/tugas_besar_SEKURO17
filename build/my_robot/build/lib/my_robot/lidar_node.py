@@ -23,7 +23,6 @@ class LidarControlNode(Node):
         twist_msg = Twist()
         all_more_than_one = all(range > 1 for range in msg.ranges)
 
-        # Jika semua jarak lebih besar dari 1 meter, robot bergerak maju
         if all_more_than_one:
             twist_msg.linear.x = 0.5  # maju
             twist_msg.angular.z = 0.0  # tidak berputar

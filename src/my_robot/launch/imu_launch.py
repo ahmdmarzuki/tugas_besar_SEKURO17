@@ -13,7 +13,7 @@ def generate_launch_description():
     return LaunchDescription([
         DeclareLaunchArgument(
             'world',
-            default_value=os.path.expanduser('~/tubes_sekuro_ws/src/my_robot/worlds/my_world.sdf'),  # Tentukan dunia default
+            default_value=os.path.expanduser('~/tubes_sekuro_ws/src/my_robot/worlds/imu_world.sdf'),  # Tentukan dunia default
             description='Choose world file'
         ),
         ExecuteProcess(  # Eksekusi perintah untuk memulai gazebo dengan dunia yang diberikan

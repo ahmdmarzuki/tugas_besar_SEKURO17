@@ -8,11 +8,8 @@ setup.py
 ../../build/my_robot/my_robot.egg-info/requires.txt
 ../../build/my_robot/my_robot.egg-info/top_level.txt
 ../../build/my_robot/my_robot.egg-info/zip-safe
-launch/launch.py
+launch/imu_launch.py
 my_robot/__init__.py
-my_robot/camera_show.py
-my_robot/camera_subscriber.py
-my_robot/image_processor.py
 my_robot/lidar_node.py
 resource/my_robot
 test/test_copyright.py
