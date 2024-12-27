@@ -1,0 +1,37 @@
+Disclaimer: ini berdasarkan pemahaman saya selama mengerjakan tugas besar
+dan eksplorasi mengenai ROS 2 dan gazebo, jadi sekiranya terdapat keliru di beberapa point,
+mungkin kakak2 bisa mengoreksinya lagi.
+
+Saya menggunakan ROS2 Jazzy(Jalisco) dan gazebo Harmonic
+
+Terdapat 3 komponen utama dari ROS, yaitu publisher, topic, dan subscriber.
+
+Publisher akan mengirim pesan ke topic, dan subscriber akan membaca pesan dari topic tersebut
+
+Contoh: saya membuat movement untuk robot.
+Ketika tombol W(maju) ditekan, pesan (misal x=0.5) akan dikirimkan ke /cmd_vel (topic).
+Kemudian robot(subscriber) akan menerima pesan x=0.5 tersebut dan membacanya sebagai bergerak maju.
+Begitu juga dengan tombol lain
+
+_______________________________________________________________________________________________________________________
+
+
+untuk membuat project ROS sendiri, saya menggunakan struktur folder standar yang umum digunakan untuk membuat robot.
+
+- buat workspace terlebih dahulu, bisa dibuat manual atau menggunakan command mkdir di terminal
+- jalankan command "colcon build" di directory workspace untuk membuat struktur foldernya. command tersebut akan membuat folder build, install, log, dan src.
+- jalankan "source install/setup.bash" untuk membuatnya permanen.
+
+Saya membuat file world dan robot model secara terpisah yang kemudian file model saya include di dalam file world.
+
+Untuk menjalankannya cukup menjalankan command "gz sim path/world.sdf" (saya menggunakan gazebo harmonic, jadi commandnya "gz sim").
+
+tapi untuk project yang lebih kompleks, misal terdapat LiDar, camera, dsb.
+Selain menjalankankan file world nya, kalian juga perlu menjalankan file python/C++ yang memuat kontrol terhadap komponen tersebut.
+Sehingga diperlukan file launch untuk dapat menjalankan semua komponen nya secara bersamaan termasuk world nya.
+
+untuk membuat file launch, tambahkan saja file (nama_file).py (kalau kalian menggunakan python) di directory src/(nama_package_kalian)/launch.
+kemudian tambahkan di entry_point pada file setup.py(kalau kalian menggunakan python).
+jalankan "colcon build" agar file launch ditambahkan ke directory "install"
+
+untuk menjalankan project nya cukup dengan menjalankan "ros2 launch (nama_package) (nama_file_launch).py"
