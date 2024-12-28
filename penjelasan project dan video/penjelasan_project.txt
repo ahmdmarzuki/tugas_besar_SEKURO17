@@ -1,0 +1,50 @@
+saya menggunakan ubuntu 24.04(noble) dengan ROS2 jazzy dan gazebo harmonic untuk project saya.
+
+Disclaimer: Untuk ROS2 jazzy dan gazebo harmonic sendiri karena tergolong masih sangat baru, sangat terbatas sekali untuk plugin dsb.
+dan di dokumentasinya pun, masih sangat sedikit, jadi saya membuat semaksimal saya dengan plugin2 yang tersedia untuk distro yg saya gunakan.
+dan banyak sekali yang perlu saya eksplor terkait ROS2 dan gazebo.
+
+Saya mendeskripsikan robot menggunakan file urdf yang saya convert lagi ke sdf.
+
+
+__________________________________________________________________________________________________________________________________
+
+Untuk project ini saya membuat 2 model robot berbeda yang dapat melakukan aksi sederhana:
+
+- Pertama, ada minibot, robot yang dapat melakukan movement yang di kontrol menggunakan WASD.
+
+- Cara kerjanya:
+    - saya menggunakan plugin "triggered publisher" untuk membaca input dari user ketika menekan tombol, input akan dikirimkan ke topic "/keyboard/keypress" dalam bentuk angka, misal 87 untuk W, dst.
+    - subscriber akan membaca topic tersebut dan mempublish pesan baru ke topic "/cmd_vel". pesan berupa nilai x(linear) dan z(angular).
+    - kemudian robot(subscriber) akan menerima pesan dari topic "/cmd_vel" untuk menentukan pergerakannya.
+
+    saya menggunakan input WASD untuk control robot saya:
+    W = Maju
+    S = Mundur
+    A = Rotasi kiri
+    D = Rotasi kanan
+
+    kekurangan dari robot pertama adalah, saya membuat modelnya hanya menggunakan 2 roda dan ukuran basenya lebih kecil dari rodanya,
+    sehingga waktu saya menggerakkan robotnya, bukan hanya rodanya yang berputar, tapi base nya juga ikut berputar ke arah yang berlawanan dari roda.
+    jadinya tidak dapat meletakkan sensor, kamera, atau komponen apapun di base nya, karena akan ikut berotasi.
+
+- untuk menjalankan robot 1, cukup mengetikkan command:
+ros2 launch my_robot minibot_launch.py
+
+__________________________________________________________________________________________________________________________________
+
+- Model kedua berupa robot dengan sensor imu dan lidar untuk menghindari tembok
+
+- Cara kerjanya:
+    - Imu sensor dapat membaca data dari IMU, data IMU berupa orientasi, angular velocity, dan percepatan linear.
+    - pada robot saya memiliki gpu lidar. lidar dapat berfungsi untuk mendeteksi obstacle di sekitar robot, ini dapat digunakan untuk mengukur jarak dari robot ke obstacle.
+    - lidar akan mengirimkan data ke topic "/lidar", termasuk data ranges.
+    
+    - saya membuat file lidar_node.py untuk mengontrol lidar dan pergerakan robot, file ini terdapat fungsi lidar_callback sebagai subscriber yang akan membaca pesan dari topic "/lidar".
+    - saya membuat pengkondisian ketika ranges > 1, maka robot akan terus bergerak maju(fungsi akan mempublish data x=0.5 ke "/cmd_vel"), jika tidak(ranges < 1), robot akan berbelok(mempublish data angular = 0.5).
+
+
+- untuk menjalankan robot 2, cukup mengetikkan command:
+ros2 launch my_robot imu_launch.py
+
+

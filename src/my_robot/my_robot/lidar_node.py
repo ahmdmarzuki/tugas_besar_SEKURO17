@@ -7,7 +7,7 @@ class LidarControlNode(Node):
     def __init__(self):
         super().__init__('lidar_control_node')
         
-        # Subscriber untuk menerima data dari LIDAR
+        # Subscriber buat nerima data dari LIDAR
         self.lidar_subscriber = self.create_subscription(
             LaserScan,
             '/lidar',
@@ -15,7 +15,7 @@ class LidarControlNode(Node):
             10
         )
         
-        # Publisher untuk mengirimkan perintah ke robot
+        # Publisher buat ngirim perintah ke robot
         self.cmd_vel_publisher = self.create_publisher(Twist, '/cmd_vel', 10)
 
     def lidar_callback(self, msg):
@@ -24,13 +24,12 @@ class LidarControlNode(Node):
         all_more_than_one = all(range > 1 for range in msg.ranges)
 
         if all_more_than_one:
-            twist_msg.linear.x = 0.5  # maju
-            twist_msg.angular.z = 0.0  # tidak berputar
+            twist_msg.linear.x = 0.5  
+            twist_msg.angular.z = 0.0  
         else:
-            twist_msg.linear.x = 0.0  # berhenti
-            twist_msg.angular.z = 0.5  # berputar
+            twist_msg.linear.x = 0.0  
+            twist_msg.angular.z = 0.5  
 
-        # Mengirimkan perintah ke robot
         self.cmd_vel_publisher.publish(twist_msg)
 
 def main(args=None):

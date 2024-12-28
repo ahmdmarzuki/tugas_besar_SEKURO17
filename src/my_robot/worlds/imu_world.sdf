@@ -169,49 +169,15 @@
           </material>
         </visual>
 
-        <sensor name="wall_contact" type="contact">
-          <contact>
-            <collision>collision</collision>
-          </contact>
-        </sensor>
       </link>
-      <plugin filename="libignition-gazebo-touchplugin-system.so" name="ignition::gazebo::systems::TouchPlugin">
-        <target>my_robot</target>
-        <namespace>wall</namespace>
-        <time>0.001</time>
-        <enable>true</enable>
-      </plugin>
+      
       <pose>5 0 1 0 0 0</pose>
     </model>
-
-    <plugin filename="libignition-gazebo-triggered-publisher-system.so" name="ignition::gazebo::systems::TriggeredPublisher">
-      <input type="gz.msgs.Boolean" topic="/wall/touched">
-        <match>data: true</match>
-      </input>
-      <output type="gz.msgs.Twist" topic="/cmd_vel">
-        linear: {x: 0.0}, angular: {z: 0.0}
-      </output>
-        
-    </plugin>
 
     <include>
       <uri>/home/ahmrrzz/tubes_sekuro_ws/src/my_robot/models/my_robot/model.sdf</uri>
       <pose>0 0 0.4 0 0 0</pose>
     </include>
-
-    <!-- <model name="my_robot">
-      <pose>0 0 0.4 0 0 0</pose>
-      <include>
-        <uri>/home/ahmrrzz/tubes_sekuro_ws/src/my_robot/models/my_robot/model.urdf</uri>
-      </include>
-      <plugin name="robot_description" filename="libgazebo_ros_factory.so">
-        <ros>
-          <namespace>/</namespace>
-        </ros>
-        <robot_description_param>robot_description</robot_description_param>
-        <robot_namespace>my_robot</robot_namespace>
-      </plugin>
-    </model> -->
 
   </world>
 </sdf>
